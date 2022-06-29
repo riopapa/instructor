@@ -268,15 +268,19 @@
             <p><i>관심있는 주변 분들에게 이 링크를 보내 주시면 그 분들께도 도움드리겠습니다</i></p>
           </section> 
        </div>
-    아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화드릴께요 !!<br><br> 
-       이름 :  <input type="text" size=6 id="neim" placeholder="실명 입력" onblur="getVal()">
+    아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화드릴께요 ^^<br><br> 
+       이름 :  <input type="text" size=6 id="neim" placeholder="실명 입력">
 	<script>
-		function getVal() {
-	  	  var neim = document.querySelector('input').value;
- 		document.getElementById("who").innerHTML = neim;
+	function insertName() {
+    	  var who =document.getElementById("neim").value; 
+ var smswho = "sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요, " + who+" 입니다";  
+document.getElementById("abc").href = smswho;
+  return false;
+}
 		}
-			     </script><p id="who"></p>
-    <a class="myButton" href="sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요. " onclick="location.href=this.href+' 저는 '+neim+' 입니다';return false;">✉ 수강 요청</a><br>
+			     </script>
+
+    <a class="myButton" href="sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요. " onclick="insertName()">✉ 수강 요청</a><br>
     <center><a class="myButton" href="tel:01049976562">☎ 바로 전화하기 </a></center>
     <center><small>수업 중 일 수도 있겠지만 😑</small></center>
 </main><br>
