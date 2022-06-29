@@ -270,6 +270,11 @@
        </div>
     아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화드릴께요.<br><br> 
        이름 :  <input type="text" size=6 placeholder="실명 입력" onblur="getVal()">
+	<script>
+		function getVal() {
+	  	const val = document.querySelector('input').value;
+		}
+			     </script>
     <center><a class="myButton" href="sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요. " onclick="location.href=this.href+' 저는 '+val+' 입니다'";return true;">✉ 무료 강의 요청하기</a></center><br>
     <center><a class="myButton" href="tel:01049976562">☎ 바로 전화하기 </a></center>
     <center><small>수업 중 일 수도 있겠지만 😑</small></center>
