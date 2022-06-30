@@ -2,28 +2,18 @@
 <html lang="kr" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <link rel="stylesheet" href="./pure-min.css">
 <link rel="stylesheet" href="./grids-responsive-min.css">
 <link rel="stylesheet" href="./styles.css">
 <title>스마트폰 강사 하원철 입니다</title>
 <style type="text/css">
-@keyframes caretBlink {
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
-}
+@keyframes caretBlink { from { opacity: 1.0; } to { opacity: 0.0; } }
 
-@keyframes rotateSpinner {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
+@keyframes rotateSpinner { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
 
 #text-tool-caret {
     animation-name: caretBlink;  
@@ -269,7 +259,8 @@
        </div>
     아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화를 드리지요 ^^<br><br> 
        이름 :  <input type="text" size=6 id="neim" placeholder="실명 입력">
-    <a class="myButton" href="sms://01049976562?body=스마트폰%20배우고%20싶어요 - 홍길동 " onclick="insertName()">✉ 수강 요청</a><br>
+    <a class="myButton" href="sms://01049976562?body=스마트폰%20배우고%20싶어요 - 홍길동 " onclick="insertName()"></a><br>
+	<a class="myButton" id="abc" href="javascript:insertName();" onclick="return false;">✉ 수강 요청</a>
 </main><br>
 <div class="pagination">  
     <p style="color:rgb(204, 230, 61)"><small>현장감이 필요한 교육들은 제가 제작한 유튜브 동영상도 활용합니다</small></p>
