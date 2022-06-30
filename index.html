@@ -218,13 +218,13 @@
 	            <ul class="social-icons pure-menu-list">
             <p><i>관심있는 주변 분들에게 이 링크를 보내 주시면 그 분들께도 도움드리겠습니다</i></p>
           </section> 
-    아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화를 드립니다 ^^<br><br> 
+    아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화를 드리겠습니다 ^^<br><br> 
        이름 :  <input type="text" size=6 id="neim" placeholder="실명 입력">
 	<a class="myButton" id="abc" href="sms://01049976562?body=스마트폰%20배우고%20싶어요 - 홍길동 " onclick="insertName()">신청합니다</a><br>
        </div>
 </main><br>
 <div class="pagination">  
-    <p style="color:rgb(204, 230, 61)">현장감이 필요한 교육들은 제가 제작한 유튜브 동영상도 활용합니다</p>
+    <p style="color:rgb(104, 30, 61)">현장감이 필요한 교육들은 제가 제작한 유튜브 동영상도 활용합니다</p>
     <span class="pagination-item"><iframe src="https://www.youtube.com/embed/ipOt8b81jYc" title="스마트폰 강의" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
     <span class="pagination-item"><iframe src="https://www.youtube.com/embed/_hWe3TNh2ow" title="스마트폰 강의" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
 
@@ -250,7 +250,7 @@
 		
 	function insertName() {
 		var who =document.getElementById("neim").value;
-		var smswho = "sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요, " + who+" 입니다";
+		var smswho = "sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요, [ " + who+" ] 입니다";
 		document.getElementById("abc").href = smswho;
 	}
 
