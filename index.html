@@ -112,7 +112,7 @@
       <ul class="social-icons pure-menu-list">
          <p style="color:rgb(255, 254, 253)"><a class="social-icon pure-menu-link" href="tel:01049976562">
            ☎ <b>010-4997-6562</b></a></p>
-         <h3 style="color:rgb(94, 233, 14)">위 전화번호를 눌러 통화 가능 합니다<br></h3>
+         <h3 style="color:rgb(94, 233, 14)">위 전화번호를 누르면 통화할 수 있어요<br></h3>
       </ul>
     </div>
   <nav class="navigation"></nav>
@@ -239,6 +239,7 @@
 	function insertName() {
 		var who =document.getElementById("neim").value;
 		var smswho = "sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요, [ " + who+" ] 입니다";
+		alert("문자 메시지 앱에 요청 문자가 자동입력됩니다. 이 떄 보내기(▶)를 눌러주시면 됩니다 ");
 		document.getElementById("abc").href = smswho;
 	}
 
