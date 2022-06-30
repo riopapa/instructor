@@ -189,7 +189,6 @@
     <h2 class="post-title">
       <center>안녕하세요<br>디지털 배움터 강사<br> <b>하원철</b> 입니다.</center>
     </h2>
-  <center><a class="myButton" href="sms://01049976562?body=스마트폰%20배우고%20싶어요.%20연락%20주세요 - 홍길동">✉ 무료 강의 요청하기</a></center><br>
     <p>스마트폰이 이미 대중화 되었지만 그 무궁한 사용 가능성에도 불구하고 제대로 활용 못하는 분들이 많습니다.
       <br>o 제대로 쓰고 싶은 분
       <br>o 쓰기는 하지만 뭔가 불편하게 느끼셨던 분
@@ -268,7 +267,7 @@
             <p><i>관심있는 주변 분들에게 이 링크를 보내 주시면 그 분들께도 도움드리겠습니다</i></p>
           </section> 
        </div>
-    아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화드리겠습니다 ^^<br><br> 
+    아래 이름란에 성함을 넣고 요청하기 버튼을 눌러 메시지를 보내시면 전화드리지요 ^^<br><br> 
        이름 :  <input type="text" size=6 id="neim" placeholder="실명 입력">
 
     <a class="myButton" href="sms://01049976562?body=스마트폰%20배우고%20싶어요 - 홍길동 " onclick="insertName()">✉ 수강 요청</a><br>
@@ -300,11 +299,12 @@
     return str;
   }
 	function insertName() {
-    	  var who =document.getElementById("neim").value; 
- var smswho = "sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요, " + who+" 입니다";  
-document.getElementById("abc").href = smswho;
-  return false;
-}
+		var who =document.getElementById("neim").value; 
+		var smswho = "sms://01049976562?body=스마트폰%20배우고%20싶으니%20연락%20주세요, " + who+" 입니다";
+		document.getElementById("abc").href = smswho;
+		
+  	return false;
+	}
 
   function scroll() {
     console.log('scroll');
