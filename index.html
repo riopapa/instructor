@@ -255,14 +255,15 @@
     window.location.href="sms:01049976562?body="+body;
     });
 
-   Swal.fire({
-        title: '📱 스마트폰<br>무료 강의',
-        imageUrl: 'schedule_2026.07.jpg',
-        imageAlt: '강의 일정',
-        imageWidth: '100%',
-        confirmButtonText: '반갑습니다',
-        width: '95%'
-    });
+Swal.fire({
+    titleHtml: '<span style="font-size:1.5rem;">📱 스마트폰<br>무료 강의</span>',
+    html: `
+        <img src="schedule_2026.07.jpg"
+             style="width:100%;height:auto;border-radius:10px;">
+    `,
+    confirmButtonText: '반갑습니다',
+    width: '95%'
+});
 </script>
 
 </body>
