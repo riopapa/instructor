@@ -271,18 +271,23 @@
     });
 
 Swal.fire({
-    title: 'AI 디지털배움터 강좌',
+    title: 'AI 디지털배움터',
     html: `
-        <div style="font-size:1.5rem;font-weight:bold;margin-bottom:15px;">
+        <div style="font-size:1.5rem;font-weight:bold;padding:15px 10px 12px;">
             스마트폰<br>무료 강의
         </div>
-
         <img src="schedule_2026.11.jpg"
-             style="width:100%;height:auto;border-radius:10px;">
+             style="width:100%;height:auto;display:block;margin:0;border-radius:0 0 15px 15px;">
     `,
+    padding: 0, // <-- 핵심: 팝업 전체 패딩 제거
     confirmButtonText: '반갑습니다',
-    width: window.innerWidth <= 600 ? '95%' : 480
+    confirmButtonColor: '#28494d',
+    width: window.innerWidth <= 600 ? '95%' : 480,
+    customClass: {
+        popup: 'tight-popup'
+    }
 });
+
 </script>
 
 </body>
