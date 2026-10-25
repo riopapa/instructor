@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -8,154 +7,85 @@
     <title>스마트폰 강사 하원철</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
-        :root{
-        --main:#28494d;
-        --green:#22c55e;
-        --orange:#f97316;
-        --bg:#f4f6f8;
-        }
-        *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-        }
-        body{
-        font-family:"맑은 고딕",sans-serif;
-        background:var(--bg);
-        color:#222;
-        line-height:1.7;
-        }
+        :root{ --main:#28494d; --green:#22c55e; --orange:#f97316; --bg:#f4f6f8; }
+        *{ margin:0; padding:0; box-sizing:border-box; }
+
+        body{ font-family:"맑은 고딕",sans-serif; background:var(--bg); color:#222; line-height:1.7; }
+
         .hero{
-        background:linear-gradient(135deg,#28494d,#3b6c72);
-        color:#fff;
-        text-align:center;
-        padding:50px 20px;
+          background:linear-gradient(135deg,#28494d,#3b6c72);
+          color:#fff;
+          text-align:center;
+          padding:50px 20px;
         }
+        .hero h1{ margin-top:15px; font-size:2.2rem; }
+        .hero p{ margin-top:8px; }
+
         .avatar{
-        width:140px;
-        height:140px;
-        border-radius:50%;
-        object-fit:cover;
-        border:4px solid #fff;
+          display:block;
+          width:200px; height:200px;
+          margin:0 auto;
+          border:4px solid #fff;
+          border-radius:50%;
+          background:#fff;
+          object-fit:cover;
+          object-position:center 30%; /* 얼굴이 위쪽에 있어 상단 기준으로 크롭 */
         }
-        .hero h1{
-        margin-top:15px;
-        font-size:2.2rem;
-        }
-        .hero p{
-        margin-top:8px;
-        }
-        .container{
-        max-width:900px;
-        margin:auto;
-        padding:20px;
-        }
+
+        .container{ max-width:900px; margin:auto; padding:20px; }
+
         .card{
-        background:#fff;
-        border-radius:20px;
-        padding:24px;
-        margin-bottom:20px;
-        box-shadow:0 8px 24px rgba(0,0,0,.08);
+          background:#fff;
+          border-radius:20px;
+          padding:24px;
+          margin-bottom:20px;
+          box-shadow:0 8px 24px rgba(0,0,0,.08);
         }
-        .card h2{
-        color:var(--main);
-        margin-bottom:12px;
-        }
+        .card h2{ color:var(--main); margin-bottom:12px; }
+
         .notice{
-        margin-top:15px;
-        background:#fff8d7;
-        border-left:5px solid #facc15;
-        padding:15px;
-        border-radius:12px;
+          margin-top:15px;
+          padding:15px;
+          background:#fff8d7;
+          border-left:5px solid #facc15;
+          border-radius:12px;
         }
-        .apply{
-        text-align:center;
-        }
+
+        .apply{ text-align:center; }
         .apply input{
-        width:100%;
-        max-width:320px;
-        padding:12px;
-        font-size:15px;
-        border:1px solid #ccc;
-        border-radius:12px;
-        margin-top:10px;
+          width:100%; max-width:320px;
+          margin-top:10px; padding:12px;
+          font-size:15px;
+          border:1px solid #ccc; border-radius:12px;
         }
         .apply-btn{
-        display:inline-block;
-        margin-top:12px;
-        padding:12px 24px;
-        background:var(--green);
-        color:#fff;
-        text-decoration:none;
-        font-size:20px;
-        font-weight:bold;
-        border-radius:14px;
+          display:inline-block;
+          margin-top:12px; padding:12px 24px;
+          background:var(--green); color:#fff;
+          font-size:20px; font-weight:bold;
+          text-decoration:none;
+          border-radius:14px;
         }
-        .btns{
-        display:flex;
-        gap:10px;
-        justify-content:center;
-        flex-wrap:wrap;
-        margin-top:16px;
-        }
-        .btn{
-        text-decoration:none;
-        color:#fff;
-        padding:10px 8px;
-        border-radius:10px;
-        font-weight:bold;
-        min-width:100px;
-        }
-        .call{
-        background:var(--orange);
-        }
-        .sms{
-        background:var(--green);
-        }
-        ul{
-        padding-left:24px;
-        }
-        .video{
-        position:relative;
-        width:100%;
-        padding-top:56.25%;
-        margin-top:15px;
-        }
-        .video iframe{
-        position:absolute;
-        inset:0;
-        width:100%;
-        height:100%;
-        border:none;
-        border-radius:12px;
-        }
-        img{
-        max-width:100%;
-        height:auto;
-        }
-        footer{
-        text-align:center;
-        padding:30px;
-        color:#666;
-        }
-        .swal2-popup{
-        max-width:90vw!important;
-        }
-        @media(max-width:600px){
-        body{
-        font-size:18px;
-        }
-        .hero h1{
-        font-size:1.8rem;
-        }
-        .card{
-        padding:18px;
-        }
-        .apply-btn{
-        font-size:20px;
-        width:100%;
-        max-width:320px;
-        }
+
+        .btns{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:16px; }
+        .btn{ padding:10px 8px; min-width:100px; border-radius:10px; color:#fff; font-weight:bold; text-decoration:none; }
+        .call{ background:var(--orange); }
+        .sms{ background:var(--green); }
+
+        ul{ padding-left:24px; }
+        img{ max-width:100%; height:auto; }
+
+        .video{ position:relative; width:100%; margin-top:15px; padding-top:56.25%; }
+        .video iframe{ position:absolute; inset:0; width:100%; height:100%; border:none; border-radius:12px; }
+
+        footer{ padding:30px; color:#666; text-align:center; }
+        .swal2-popup{ max-width:90vw!important; }
+
+        @media (max-width:600px){
+          body{ font-size:18px; }
+          .hero h1{ font-size:1.8rem; }
+          .card{ padding:18px; }
+          .apply-btn{ width:100%; max-width:320px; font-size:20px; }
         }
     </style>
 </head>
@@ -210,7 +140,7 @@
         <h3>📚 이런 내용 배워 봐요</h3>
         <ul>
             <li><b>카카오톡 기본</b> : 알림 취소, 상단고정, 사진 몰아보내기, 카톡소리 다르게</li>
-            <li><b>카카오톡 활용</b> : 투표, 공지, 예약 메시지, 북마크, 나만의 카톡소리 만들기 </li>
+            <li><b>카카오톡 활용</b> : 투표, 공지, 예약 메시지, 북마크, 나만의 카톡소리 만들기</li>
             <li><b>홈화면</b> 정리 : 용도별 폴더를 만들어 앱 모아 놓기, 바로가기 만들기</li>
             <li><b>네이버지도</b> : 대중교통으로 길찾기, 버스에서 내려 헤매지 않기</li>
             <li><b>사진</b> : 카메라 설정과 사진 잘 찍기, 사진 보정 및 꾸미기</li>
@@ -218,19 +148,16 @@
             <li><b>갤럭시 AI</b> : 갤럭시에 있는 AI 기능 활용, 번역, 문서 요약, 통화내용 요약</li>
             <li><b>동영상 편집</b> : 갤러리에서 동영상 만들기 부터 동영상 제작전문 앱 배우기</li>
             <li><b>동영상 고급</b> : 자막 넣기, AI로 나만의 배경음악 만들기</li>
-            <li><b>유뷰버 되기 </b> : 동영상을 만들고 유튜브에 업로드하기</li>
-            <li><b>인공지능 트렌드</b> : 인공지능의 이해,  인공지능 추세</li>
+            <li><b>유튜버 되기</b> : 동영상을 만들고 유튜브에 업로드하기</li>
+            <li><b>인공지능 트렌드</b> : 인공지능의 이해, 인공지능 추세</li>
             <li><b>ChatGPT · Gemini</b> : 실제 인공지능 앱 활용하기</li>
         </ul>
-
     </section>
 
     <section class="card">
         <h2>🗓️ 강의 일정</h2>
         <center>
-            <img src="schedule_2026.11.jpg"
-                 style="width:100%;height:auto;border-radius:10px;"
-                 alt="11월 강의 일정표">
+            <img src="schedule_2026.11.jpg" style="width:100%;height:auto;border-radius:10px;" alt="11월 강의 일정표">
         </center>
     </section>
 
@@ -241,53 +168,46 @@
         <p>제가 제작한 교육 영상도 활용합니다.</p>
         <h3>🎥 교육 영상</h3>
         <div class="video">
-            <iframe src="https://www.youtube.com/embed/qJCl2Y1S6jY" title="알람 제목 읽기"
-                    allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/qJCl2Y1S6jY" title="알람 제목 읽기" allowfullscreen></iframe>
         </div>
         <div class="video">
-            <iframe src="https://www.youtube.com/embed/HF6_qs1mjFE" title="티맵 바로가기"
-                    allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/HF6_qs1mjFE" title="티맵 바로가기" allowfullscreen></iframe>
         </div>
     </section>
 
 </div>
 
-<footer>
-    관심 있는 분들에게 공유해 주시면 감사하겠습니다 😊
-</footer>
+<footer>관심 있는 분들에게 공유해 주시면 감사하겠습니다 😊</footer>
 
 <script>
-    document.getElementById("applyBtn").addEventListener("click",function(e){
-    e.preventDefault();
-    const name=document.getElementById("neim").value.trim();
-    if(!name){
-    Swal.fire("안내","성함을 입력해 주세요.","warning");
-    return;
-    }
-    const body=encodeURIComponent(
-    "하원철 강사님, 스마트폰, 인공지능 교육 받고싶어요. 신청자 ["+name+"]"
-    );
-    window.location.href="sms:01049976562?body="+body;
+    document.getElementById("applyBtn").addEventListener("click", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("neim").value.trim();
+      if (!name) {
+        Swal.fire("안내", "성함을 입력해 주세요.", "warning");
+        return;
+      }
+      const body = encodeURIComponent(
+        "하원철 강사님, 스마트폰, 인공지능 교육 받고싶어요. 신청자 [" + name + "]"
+      );
+      window.location.href = "sms:01049976562?body=" + body;
     });
 
-Swal.fire({
-    title: 'AI 디지털배움터',
-    html: `
+    Swal.fire({
+      title: 'AI 디지털배움터',
+      html: `
         <div style="font-size:1.5rem;font-weight:bold;padding:15px 10px 12px;">
-            스마트폰<br>무료 강의
+          스마트폰<br>무료 강의
         </div>
         <img src="schedule_2026.11.jpg"
              style="width:100%;height:auto;display:block;margin:0;border-radius:0 0 15px 15px;">
-    `,
-    padding: 0, // <-- 핵심: 팝업 전체 패딩 제거
-    confirmButtonText: '반갑습니다',
-    confirmButtonColor: '#28494d',
-    width: window.innerWidth <= 600 ? '95%' : 480,
-    customClass: {
-        popup: 'tight-popup'
-    }
-});
-
+      `,
+      padding: 0, // 팝업 전체 패딩 제거
+      confirmButtonText: '반갑습니다',
+      confirmButtonColor: '#28494d',
+      width: window.innerWidth <= 600 ? '95%' : 480,
+      customClass: { popup: 'tight-popup' }
+    });
 </script>
 
 </body>
